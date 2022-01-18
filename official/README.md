@@ -13,20 +13,6 @@ It can be used to filter in the same manner as the website and can be useful if 
 go based apps and tools for displaying and working with the official data.
 
 
-## Installation
-
-**sockets** requires a [supported release of Go](https://golang.org/doc/devel/release.html#policy).
-
-```shell script
-go get -u github.com/theflyingcodr/aoe4-client
-```
-
-## Documentation
-
-View the generated [documentation](https://pkg.go.dev/github.com/theflyingcodr/aoe4-client)
-
-[![GoDoc](https://godoc.org/github.com/theflyingcodr/aoe4-client?status.svg&style=flat)](https://pkg.go.dev/github.com/theflyingcodr/aoe4-client)
-
 ## Useage
 
 A quick example is shown below:

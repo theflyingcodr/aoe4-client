@@ -1,37 +1,32 @@
-# go-lib-template
+# AOE4 Client
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/theflyingcodr/go-lib-template/Go?style=flat-square)
-![GitHub](https://img.shields.io/github/license/theflyingcodr/go-lib-template?style=flat-square)
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/theflyingcodr/go-lib-template?style=flat-square)
-[![Report](https://goreportcard.com/badge/github.com/theflyingcodr/go-lib-template?style=flat&v=1)](https://goreportcard.com/report/github.com/theflyingcodr/go-lib-template)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/theflyingcodr/go-lib-template?style=flat-square)
+[![Release](https://img.shields.io/github/release-pre/theflyingcodr/aoe4-client.svg?logo=github&style=flat&v=1)](https://github.com/theflyingcodr/aoe4-client/releases)
+[![Build Status](https://github.com/theflyingcodr/aoe4-client/actions/workflows/go.yml/badge.svg)](https://github.com/theflyingcodr/aoe4-client/actions/workflows/go.yml)
+[![CodeQL Status](https://github.com/theflyingcodr/aoe4-client/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/theflyingcodr/aoe4-client/actions/workflows/codeql-analysis.yml)
+[![Report](https://goreportcard.com/badge/github.com/theflyingcodr/aoe4-client?style=flat&v=1)](https://goreportcard.com/report/github.com/theflyingcodr/aoe4-client)
+[![codecov](https://codecov.io/gh/libsv/go-bt/branch/master/graph/badge.svg?v=1)](https://codecov.io/gh/theflyingcodr/aoe4-client)
+[![Go](https://img.shields.io/github/go-mod/go-version/theflyingcodr/aoe4-client?v=1)](https://golang.org/)
 
-A git template that can be used to bootstrap a go library, ie, something that isn't an executable.
+## Overview
 
-This comes complete with git actions for:
+This is a go client used to query AOE4 data from either the official leaderboards or the aoeiv.net api.
 
-* greetings  - welcome new contributors automatically
-* build & release - to ensure your code is building before creating a release
-* code quality - to scan for obvious issues
+There are two packages within the client that can be used [official](official) and [aoeivnet](aoeivnet), each one calls the respective web service but they both contain a similar, fluent filter based API for ease of use.
 
-There is also a [Makefile](Makefile) with some handy common commands for running all tests, testing the releaser etc.
+Under each package is a README explaining useage and with an examples sub directory with code useage.
 
-This will hopefully make a good starting point when you are looking to start a new go project.
 
-## Getting started
+## Installation
 
-* Create a new github repo
-* Select this as the template
-* Clone the repo
-* run `go mod init github.com/youruser/yourporject`
-* code code code
+**This** requires a [supported release of Go](https://golang.org/doc/devel/release.html#policy).
 
-## Build pipeline
+```shell script
+go get -u github.com/theflyingcodr/aoe4-client
+```
 
-The go build will run on PRs and when pushed to master. When you tag master it will then run the go build and then create a release.
+## Documentation
 
-## Mergify
+View the generated [documentation](https://pkg.go.dev/github.com/theflyingcodr/aoe4-client)
 
-It also has a mergify config if you run that on your repos for auto merging etc.
+[![GoDoc](https://godoc.org/github.com/theflyingcodr/aoe4-client?status.svg&style=flat)](https://pkg.go.dev/github.com/theflyingcodr/aoe4-client)
 
-Lets see if it works. Hmm
