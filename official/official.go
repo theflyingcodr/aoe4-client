@@ -10,12 +10,12 @@ import (
 // Client is used to query the aoe leaderboards and contains
 // an http client.
 type Client struct {
-	h aoe.HttpClient
+	h aoe.HTTPClient
 }
 
-// NewClient will setup a new client used for querying the offical AOE
+// NewClient will setup a new client used for querying the official AOE
 // Leaderboards.
-func NewClient(c aoe.HttpClient) *Client {
+func NewClient(c aoe.HTTPClient) *Client {
 	return &Client{
 		h: c,
 	}

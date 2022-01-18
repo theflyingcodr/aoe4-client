@@ -1,5 +1,6 @@
 package official
 
+// Region is used for constants when filtering.
 type Region int
 
 // Region constants used by the api.
@@ -14,6 +15,7 @@ const (
 	RegionGlobal       Region = 7
 )
 
+// TeamSize is used for constants when filtering.
 type TeamSize string
 
 // TeamSize constants used by the api.
@@ -25,6 +27,7 @@ const (
 	TeamSize4v4 TeamSize = "4v4"
 )
 
+// MatchType is used for constants when filtering.
 type MatchType string
 
 // MatchType constants used by the api.
@@ -37,8 +40,10 @@ const (
 	MatchTypeAIExpert       MatchType = "aiexpert"
 )
 
+// Versus is used for constants when filtering.
 type Versus string
 
+// Versus constants used by the API.
 const (
 	VersusAll     Versus = ""
 	VersusPlayers Versus = "players"

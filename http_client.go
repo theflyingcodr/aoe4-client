@@ -29,7 +29,8 @@ func WithTimeout(d time.Duration) optfunc {
 	}
 }
 
-type HttpClient interface {
+// HTTPClient is an exportable interface that can be used to mock the client.
+type HTTPClient interface {
 	Do(ctx context.Context, method, url string, body interface{}, out interface{}) error
 }
 
@@ -76,7 +77,7 @@ func (h httpclient) Do(ctx context.Context, method, url string, body interface{}
 	if err != nil {
 		return err
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 	if resp.StatusCode < 200 || resp.StatusCode > 300 {
 		return fmt.Errorf("unexpected status code %s returned from %s %s", resp.Status, strings.ToUpper(method), url)
 	}
